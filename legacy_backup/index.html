@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VERUS DOGS | ADIESTRAMIENTO CANINO DE ÉLITE EN CALI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=JetBrains+Mono:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body class="noise scanlines">
+    <div class="scroll-progress"></div>
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
+
+    <header class="header">
+        <div class="container-full">
+            <div class="header-inner">
+                <a href="#" class="logo-lab"><img src="assets/img/company-logo.png" alt="Company Logo" class="main-logo"></a>
+                <div class="header-meta">
+                    <span class="location">[ CALI / COLOMBIA ]</span>
+                    <span class="time" id="local-time">00:00:00</span>
+                </div>
+                <nav class="nav-minimal">
+                    <button class="menu-btn"><span>RESERVAR CUPO</span></button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero-motion">
+            <div class="hero-visual">
+                <video autoplay muted loop playsinline class="hero-img">
+                    <source src="https://assets.mixkit.co/videos/preview/mixkit-dog-running-in-the-grass-1188-large.mp4" type="video/mp4">
+                </video>
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-text-container">
+                <span class="label animate-in">ESTABLECIDOS EN CALI / COLOMBIA</span>
+                <h1 class="split-text">MÁS QUE<br>LEALTAD</h1>
+                <p class="animate-in">La evolución técnica del adiestramiento. Psicología canina avanzada y desarrollo físico de alto rendimiento en el corazón del Valle.</p>
+                <div class="hero-cta animate-in">
+                    <a href="https://wa.me/573000000000" class="btn-lab large">AGENDAR EVALUACIÓN</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHILOSOPHY SECTION -->
+        <section class="philosophy-motion">
+            <div class="bg-texture" style="background-image: url('https://images.unsplash.com/photo-1555617766-c94804975da3?q=80&w=2000'); opacity: 0.15;"></div>
+            <div class="container">
+                <div class="phi-grid">
+                    <div class="phi-text">
+                        <span class="label">METODOLOGÍA / 01</span>
+                        <h2 class="reveal-text">CIENCIA DEL <span>COMPORTAMIENTO</span></h2>
+                        <p class="reveal-text">Nuestro enfoque se basa en la psicología del aprendizaje. No usamos la fuerza; entendemos cómo aprende tu perro para transformar su conducta mediante el refuerzo positivo y el equilibrio emocional.</p>
+                        <a href="#" class="btn-lab">CONOCER MÁS</a>
+                    </div>
+                    <div class="phi-image-box">
+                        <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?q=80&w=1200" alt="Training" class="parallax-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HORIZONTAL SCROLL SERVICES -->
+        <section class="horizontal-scroll-container">
+            <div class="bg-texture" style="background-image: url('https://images.unsplash.com/photo-1514565131-fce0801e5785?q=80&w=2500'); opacity: 0.1;"></div>
+            <div class="sticky-wrapper">
+                <div class="horizontal-track">
+                    <div class="h-panel intro-panel">
+                        <span class="label">PROGRAMAS / ÉLITE</span>
+                        <h2>NUESTROS<br><span>SERVICIOS</span></h2>
+                        <div class="scroll-hint">DESLIZA PARA EXPLORAR →</div>
+                    </div>
+                    <!-- Panel 1 -->
+                    <div class="h-panel">
+                        <div class="s-card">
+                            <div class="bg-texture" style="background-image: url('https://images.unsplash.com/photo-1534361960057-19889db9621e?q=80&w=1200'); opacity: 0.2;"></div>
+                            <span class="num">01 / OBEDIENCIA URBANA</span>
+                            <h3>CONTROL <span>TOTAL</span></h3>
+                            <p>Manejo técnico sin correa en entornos reales de Cali. Un perro confiable y educado en cualquier situación social.</p>
+                        </div>
+                    </div>
+                    <!-- Panel 2 -->
+                    <div class="h-panel">
+                        <div class="s-card active">
+                            <div class="bg-texture" style="background-image: url('https://images.unsplash.com/photo-1598133894008-61f7fdb8cc3a?q=80&w=1200'); opacity: 0.2;"></div>
+                            <span class="num">02 / REHABILITACIÓN</span>
+                            <h3>CONDUCTA <span>EQUILIBRADA</span></h3>
+                            <p>Especialistas en casos de agresividad, miedos y ansiedad. Re-educación profunda basada en el bienestar del perro.</p>
+                        </div>
+                    </div>
+                    <!-- Panel 3 -->
+                    <div class="h-panel">
+                        <div class="s-card">
+                            <div class="bg-texture" style="background-image: url('https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?q=80&w=1200'); opacity: 0.2;"></div>
+                            <span class="num">03 / PUPPY LAB</span>
+                            <h3>FUNDAMENTOS <span>TEMPRANOS</span></h3>
+                            <p>Socialización dirigida y prevención de conductas para cachorros. Construyendo la base de un perro adulto sano.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="cta-final-motion">
+            <div class="bg-texture" style="background-image: url('https://images.unsplash.com/photo-1505628346881-b72b27e84530?q=80&w=2000'); opacity: 0.15;"></div>
+            <div class="cta-bg-glow"></div>
+            <div class="cta-content-motion">
+                <span class="label">TU PERRO, SU MEJOR VERSIÓN</span>
+                <h2 class="split-text-cta">ÚNETE A LA<br><span>REVOLUCIÓN</span></h2>
+                <div class="hero-cta">
+                    <a href="https://wa.me/573000000000" class="btn-lab large">CONTACTAR POR WHATSAPP</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-lab-motion">
+        <div class="container-full">
+            <div class="footer-inner">
+                <div class="f-col">
+                    <span class="label">SÍGUENOS</span>
+                    <div class="f-links">
+                        <a href="#">INSTAGRAM</a>
+                        <a href="https://wa.me/573000000000">WHATSAPP</a>
+                        <a href="#">FACEBOOK</a>
+                    </div>
+                </div>
+                <div class="f-col">
+                    <span class="label">UBICACIÓN / SEDE</span>
+                    <p>CALI, VALLE DEL CAUCA<br>COLOMBIA</p>
+                </div>
+                <div class="f-col f-logo">
+                    <img src="assets/img/company-logo.png" alt="Company Logo" class="footer-logo">
+                    <p class="copyright">© 2026 VERUS PERFORMANCE LAB. CALI, COLOMBIA.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
