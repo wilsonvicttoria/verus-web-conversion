@@ -3,11 +3,11 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const steps = [
-  { num: "01", title: "ACTIVACIÓN", subtitle: "CALENTAMIENTO", desc: "Preparamos el cuerpo y la mente para el trabajo. Enfoque y predisposición positiva.", img: "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?q=80&w=1200" },
-  { num: "02", title: "POTENCIA", subtitle: "CARDIO", desc: "Liberación de energía acumulada mediante ejercicio físico estructurado.", img: "https://images.unsplash.com/photo-1534361960057-19889db9621e?q=80&w=1200" },
-  { num: "03", title: "IMPULSO", subtitle: "MOTIVACIÓN", desc: "Desarrollamos el deseo de trabajar junto al guía. Vínculo indestructible.", img: "https://images.unsplash.com/photo-1598133894008-61f7fdb8cc3a?q=80&w=1200" },
-  { num: "04", title: "COGNICIÓN", subtitle: "MENTAL", desc: "Resolución de problemas y obediencia técnica bajo presión.", img: "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?q=80&w=1200" },
-  { num: "05", title: "CALMA", subtitle: "REGULACIÓN", desc: "Cierre con ejercicios de relajación. Un perro equilibrado en todo entorno.", img: "https://images.unsplash.com/photo-1505628346881-b72b27e84530?q=80&w=2000" },
+  { num: "01", title: "ACTIVACIÓN", subtitle: "CALENTAMIENTO", desc: "Preparamos el cuerpo y la mente para el trabajo. Enfoque y predisposición positiva.", img: "/assets/img/method_1.png" },
+  { num: "02", title: "POTENCIA", subtitle: "CARDIO", desc: "Liberación de energía acumulada mediante ejercicio físico estructurado.", img: "/assets/img/method_2.png" },
+  { num: "03", title: "IMPULSO", subtitle: "MOTIVACIÓN", desc: "Desarrollamos el deseo de trabajar junto al guía. Vínculo indestructible.", img: "/assets/img/method_3.png" },
+  { num: "04", title: "COGNICIÓN", subtitle: "MENTAL", desc: "Resolución de problemas y obediencia técnica bajo presión.", img: "/assets/img/method_4.png" },
+  { num: "05", title: "CALMA", subtitle: "REGULACIÓN", desc: "Cierre con ejercicios de relajación. Un perro equilibrado en todo entorno.", img: "/assets/img/method_5.png" },
 ];
 
 export default function Methodology() {
@@ -50,7 +50,7 @@ export default function Methodology() {
   }, []);
 
   return (
-    <section ref={containerRef} className="bg-black py-20 lg:py-48 overflow-hidden px-[8vw]">
+    <section ref={containerRef} id="metodologia" className="bg-black py-20 lg:py-48 overflow-hidden px-[8vw]">
       <div className="max-w-4xl">
         <span className="mb-4 block font-mono text-[10px] tracking-[0.4em] text-verus-gold font-bold uppercase">
           [ EL SISTEMA VERUS ]
@@ -81,6 +81,9 @@ export default function Methodology() {
                 alt={step.title}
                 className="method-img-element h-full w-full object-cover filter grayscale"
                 style={{ filter: "grayscale(100%)" }}
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?q=80&w=1200";
+                }}
               />
             </div>
           </div>
