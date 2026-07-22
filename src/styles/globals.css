@@ -3,16 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --bg-dark: #050505;
+  --bg-deep: #080b11;
+  --bg-card: #0e131f;
   --verus-gold: #E5B200;
   --verus-gold-light: #FFD700;
 }
 
 body {
-  background-color: var(--bg-dark);
-  color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg-deep);
+  color: #f1f5f9;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, .font-display {
@@ -22,15 +24,19 @@ h1, h2, h3, h4, .font-display {
 
 @layer components {
   .btn-verus {
-    @apply bg-gradient-to-r from-[#E5B200] via-[#FFD700] to-[#E5B200] px-8 py-4 text-black font-black uppercase text-xs tracking-widest transition-all duration-300 hover:scale-105 hover:shadow-[0_0_35px_rgba(229,178,0,0.4)];
+    @apply bg-gradient-to-r from-[#E5B200] via-[#FFD700] to-[#E5B200] px-8 py-4 text-black font-black uppercase text-xs tracking-widest transition-all duration-300 hover:scale-105 hover:shadow-[0_0_35px_rgba(229,178,0,0.45)] rounded-xl;
   }
 
   .glass-panel-gold {
-    @apply border border-white/10 bg-[#0c0c0c]/80 backdrop-blur-xl rounded-2xl transition-all duration-300 hover:border-[#E5B200]/40 hover:shadow-[0_10px_30px_rgba(0,0,0,0.8)];
+    @apply border border-white/10 bg-[#0e131f]/90 backdrop-blur-xl rounded-2xl transition-all duration-300 hover:border-[#E5B200]/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.9)] hover:-translate-y-1;
   }
 
-  .gold-border-glow {
-    @apply relative border border-[#E5B200]/30 shadow-[0_0_20px_rgba(229,178,0,0.15)];
+  .aurora-bg {
+    background: radial-gradient(circle at 50% 30%, rgba(229, 178, 0, 0.1) 0%, transparent 65%);
+  }
+
+  .gold-gradient-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-[#E5B200] via-[#FFD700] to-[#E5B200];
   }
 }
 
@@ -39,10 +45,10 @@ h1, h2, h3, h4, .font-display {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #050505;
+  background: #080b11;
 }
 ::-webkit-scrollbar-thumb {
-  background: #222222;
+  background: #1e293b;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
