@@ -1,1 +1,5 @@
-node_modules/\n.next/\ndist/\n.vercel/
+node_modules/
+.next/
+dist/
+.vercel/
+*.tsbuildinfo
