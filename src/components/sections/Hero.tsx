@@ -1,70 +1,85 @@
+import { Link } from 'react-router-dom';
+
 export default function Hero() {
   return (
-    <section id="inicio" className="relative min-h-screen overflow-hidden">
-      {/* VIDEO BACKGROUND */}
+    <section id="inicio" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20">
+      {/* VIDEO BACKGROUND WITH CINEMATIC OVERLAYS */}
       <video
         autoPlay
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-40"
+        className="absolute inset-0 w-full h-full object-cover opacity-30 filter grayscale scale-105"
       >
         <source src="/assets/video/hero.mp4" type="video/mp4" />
       </video>
-      
-      {/* CINEMATIC OVERLAYS */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50" />
-      
-      {/* VIGNETTE */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_100%_80%_at_50%_50%,transparent_40%,rgba(0,0,0,0.9))]" />
-      
-      {/* GOLD GLOW */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-verus-gold/20 rounded-full blur-[150px] animate-pulse" />
-      
-      {/* CONTENT */}
-      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center text-center px-4">
-        <span className="inline-flex items-center gap-3 font-mono text-xs tracking-[0.5em] text-verus-gold/80 mb-8 uppercase">
-          <span className="w-2 h-2 bg-verus-gold rounded-full animate-pulse" />
-          CALI / VALLE DEL CAUCA
-        </span>
-        
-        <h1 className="font-black text-white uppercase leading-[0.9] mb-8">
-          <span className="text-[clamp(2.5rem,10vw,8rem)] md:text-[clamp(3rem,12vw,10rem)] block drop-shadow-2xl">
+
+      <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-[#050505]/70 to-[#050505]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_40%,rgba(229,178,0,0.12),transparent_70%)]" />
+
+      {/* AMBIENT GLOW */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-[#E5B200]/15 rounded-full blur-[160px] pointer-events-none" />
+
+      {/* HERO CONTENT */}
+      <div className="relative z-10 max-w-5xl mx-auto text-center px-6 py-16">
+        {/* TOP TECHNICAL BADGE */}
+        <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8">
+          <span className="w-2 h-2 rounded-full bg-[#E5B200] animate-pulse" />
+          <span className="font-mono text-xs tracking-[0.3em] text-[#E5B200] uppercase font-bold">
+            VERUS PERFORMANCE LAB — SANTIAGO DE CALI
+          </span>
+        </div>
+
+        {/* MAIN HEADLINE */}
+        <h1 className="font-black text-white uppercase tracking-tighter leading-[0.95] mb-8 font-display">
+          <span className="text-[clamp(2.2rem,8vw,6.5rem)] block drop-shadow-2xl text-white">
             LA CIENCIA DEL
           </span>
-          <span className="text-[clamp(2.5rem,10vw,8rem)] md:text-[clamp(3rem,12vw,10rem)] block mt-2 text-transparent" style={{ WebkitTextStroke: "2px #E5B200" }}>
-            COMPORTAMIENTO
+          <span
+            className="text-[clamp(2.2rem,8vw,6.5rem)] block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-[#E5B200] via-[#FFD700] to-[#E5B200]"
+          >
+            COMPORTAMIENTO CANINO
           </span>
         </h1>
 
-        <p className="text-gray-400 text-base sm:text-lg md:text-xl max-w-xl mt-4 mb-12">
-          Evolución técnica y psicología de alto rendimiento para el perro moderno.
+        <p className="text-gray-300 text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-12 font-sans font-normal">
+          Psicología animal de alta exigencia, adiestramiento ético y paseos técnicos estructurados en Ciudad Jardín, Pance, Valle del Lili y Bochalema.
         </p>
-        
-        <div className="flex flex-col sm:flex-row gap-4">
-          <a
-            href="https://wa.me/573006081088?text=Hola%20Verus%20🐾%2C%20quiero%20reservar%20un%20cupo"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative overflow-hidden bg-gradient-to-r from-verus-gold via-verus-goldLight to-verus-gold px-10 py-4 text-black font-black uppercase text-xs tracking-[0.2em] transition-all duration-500 hover:scale-105 hover:shadow-[0_0_40px_rgba(229,178,0,0.4)]"
+
+        {/* CTA BUTTONS */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Link
+            to="/adiestramiento-canino-cali"
+            className="btn-verus rounded-sm text-xs font-bold w-full sm:w-auto"
           >
-            <span className="relative z-10 flex items-center gap-3">
-              Reservar Cupo
-              <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </span>
-            <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
-          </a>
+            VER PROGRAMA DE ADIESTRAMIENTO
+          </Link>
+          <Link
+            to="/paseos-caninos-cali"
+            className="bg-white/5 hover:bg-white/10 border border-white/15 px-8 py-4 text-white font-bold uppercase text-xs tracking-widest transition-all rounded-sm w-full sm:w-auto hover:border-[#E5B200]/50"
+          >
+            PASEOS TÉCNICOS GPS
+          </Link>
         </div>
-        
-        {/* SCROLL INDICATOR */}
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4">
-          <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center">
-            <div className="w-1.5 h-1.5 bg-verus-gold rounded-full mt-2 animate-bounce" />
+
+        {/* KEY HIGHLIGHTS BAR */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mt-16 pt-12 border-t border-white/10">
+          <div className="text-center">
+            <span className="block font-mono text-xl font-black text-[#E5B200]">100%</span>
+            <span className="font-mono text-[10px] text-gray-400 uppercase tracking-widest">CIENCIA ETOLÓGICA</span>
           </div>
-          <span className="text-[9px] font-mono tracking-[0.3em] text-gray-600 uppercase">Scroll</span>
+          <div className="text-center">
+            <span className="block font-mono text-xl font-black text-[#E5B200]">GPS</span>
+            <span className="font-mono text-[10px] text-gray-400 uppercase tracking-widest">MONITOREO DE PASEOS</span>
+          </div>
+          <div className="text-center">
+            <span className="block font-mono text-xl font-black text-[#E5B200]">CALI</span>
+            <span className="block font-mono text-[10px] text-gray-400 uppercase tracking-widest">ZONA SUR PRIORITARIA</span>
+          </div>
+          <div className="text-center">
+            <span className="block font-mono text-xl font-black text-[#E5B200]">5.0 ★</span>
+            <span className="block font-mono text-[10px] text-gray-400 uppercase tracking-widest">VALORACIÓN DE TUTORES</span>
+          </div>
         </div>
       </div>
     </section>
